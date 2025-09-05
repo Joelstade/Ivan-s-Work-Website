@@ -1,0 +1,37 @@
+/* Make the host fill the full viewport */
+:host {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('/assets/background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+/* Main area under navbar */
+.app-main {
+  flex: 1; /* take remaining space below navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  min-height: calc(100vh * 1.2 - 64px); /* 1.2 screens minus navbar height if needed */
+}
+
+/* Centered content container */
+.content-wrapper {
+  width: 50%;
+  min-height: 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(10, 0, 30, 0.9) 0%,     /* almost black purple */
+    rgba(20, 0, 60, 0.8) 50%,    /* deep purple */
+    rgba(30, 0, 90, 0.7) 100%    /* slightly lighter dark violet */
+  );
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px); /* frosted glass effect */
+}
